@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TaskFlow</string>
+    <string name="tasks">Список задач</string>
+    <string name="get">Получить задачи</string>
+</resources>
