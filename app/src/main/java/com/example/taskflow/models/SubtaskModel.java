@@ -7,12 +7,16 @@ public class SubtaskModel {
 
     private String name;
 
-    private boolean isComplete;
+    private boolean complete;
 
-    public SubtaskModel(long id, String name, boolean isComplete) {
+    public SubtaskModel(long id, String name, boolean complete) {
         this.id = id;
         this.name = name;
-        this.isComplete = isComplete;
+        this.complete = complete;
+    }
+
+    public SubtaskModel(String name) {
+        this.name = name;
     }
 
     public SubtaskModel() {
@@ -35,11 +39,11 @@ public class SubtaskModel {
     }
 
     public boolean isComplete() {
-        return isComplete;
+        return complete;
     }
 
     public void setComplete(boolean complete) {
-        isComplete = complete;
+        this.complete = complete;
     }
 
     @Override
@@ -47,11 +51,11 @@ public class SubtaskModel {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SubtaskModel that = (SubtaskModel) o;
-        return id == that.id && isComplete == that.isComplete && Objects.equals(name, that.name);
+        return id == that.id && complete == that.complete && Objects.equals(name, that.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, isComplete);
+        return Objects.hash(id, name, complete);
     }
 }

@@ -7,58 +7,69 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
+
+    <ImageView
+        android:id="@+id/taskFlowImage"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toStartOf="@+id/taskSortedSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+    <Spinner
+        android:id="@+id/taskSortedSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/amaranth"
-        android:text="@string/tasks"
-        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/taskFlowImage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/taskFlowImage"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--    <ListView-->
-<!--        android:id="@+id/listTasksView"-->
-<!--        android:layout_width="409dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_marginStart="1dp"-->
-<!--        android:layout_marginTop="1dp"-->
-<!--        android:layout_marginEnd="1dp"-->
-<!--        android:layout_marginBottom="1dp"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/getTask"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textView" >-->
-
-<!--    </ListView>-->
-
-<!--    <Button-->
-<!--        android:id="@+id/getTask"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--&lt;!&ndash;        android:onClick="getAllMyTasks"&ndash;&gt;-->
-<!--        android:text="@string/get"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
-
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/taskFlowImage">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerTasksView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:backgroundTint="@android:color/transparent"
+            android:backgroundTintMode="add"
             android:orientation="vertical" />
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addNewTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:clickable="true"
+        android:tint="@android:color/transparent"
+        app:backgroundTint="@android:color/transparent"
+        app:backgroundTintMode="multiply"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toStartOf="@+id/taskSortedSpinner"
+        app:layout_constraintStart_toEndOf="@+id/taskFlowImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="40dp"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="@color/appLogoColor" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

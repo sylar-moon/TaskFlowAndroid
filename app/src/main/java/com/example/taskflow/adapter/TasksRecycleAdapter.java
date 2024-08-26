@@ -20,9 +20,9 @@ import java.util.List;
 public class TasksRecycleAdapter extends RecyclerView.Adapter<TasksRecycleAdapter.TaskViewHolder> {
 
     Context context;
-    List<ArrayAdapter<TaskModel>> arrayAdapters;
+    List<TaskListViewAdapter> arrayAdapters;
 
-    public TasksRecycleAdapter(Context context, List<ArrayAdapter<TaskModel>> arrayAdapters) {
+    public TasksRecycleAdapter(Context context, List<TaskListViewAdapter> arrayAdapters) {
         this.context = context;
         this.arrayAdapters = arrayAdapters;
     }
@@ -52,11 +52,7 @@ public class TasksRecycleAdapter extends RecyclerView.Adapter<TasksRecycleAdapte
                 holder.nameList.setText("Closed task list");
                 break;
         }
-//
-//        ArrayAdapter<StateEnum> spinnerAdapter = new ArrayAdapter<>(context,android.R.layout.simple_spinner_item,
-//                StateEnum.values());
-//        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        holder.taskSpinner.setAdapter(spinnerAdapter);
+
 
     }
 

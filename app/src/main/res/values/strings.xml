@@ -2,4 +2,11 @@
     <string name="app_name">TaskFlow</string>
     <string name="tasks">Список задач</string>
     <string name="get">Получить задачи</string>
+    <string name="subtask">Увидеть подзадачи</string>
+    <string name="delete">Удалить</string>
+    <string name="edit">Редактировать</string>
+    <string name="add">Создать</string>
+    <string name="close">Закрыть</string>
+    <string name="add_new_task">Создать новую задачу</string>
+    <string name="add_new_task_hint">Введите пожалуйста сюда имя задачи</string>
 </resources>
